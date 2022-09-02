@@ -22,19 +22,18 @@ export default function MintingList({ data }) {
                 src={imgurl}
                 alt="cover image"
                 width="100%"
-                height="60%"
+                height="50%"
                 layout="responsive"
                 objectFit="cover"
-
                 quality={100}
             />
 
-            <div className="p-7 flex flex-col">
+            <div className="p-4 flex flex-col">
                 <h1 className="text-2xl font-bold">🎉{projectTitle}</h1>
                 <h3 className="my-5 text-lg bg-gray-200 px-5 py-3 dark:bg-gray-700 dark:text-gray-300">{desc}</h3>
                 <ul className="mt-5">
-                    <li className="mb-3">EndDate : {endDate}</li>
-                    <li className="mb-3"><h3>Minting Price : {price} {priceType}</h3></li>
+                    <li className="mb-3"> EndDate : {endDate}</li>
+                    <li className="mb-3"><h3> Minting Price : {price} {priceType}</h3></li>
                     <li className="mb-3"><h3> Twitter : {twitter}</h3></li>
                 </ul>
 
@@ -45,14 +44,6 @@ export default function MintingList({ data }) {
                     ))}
                 </div>
                 <a href={url}>바로가기</a>
-
-
-
-
-
-
-
-
             </div>
 
 

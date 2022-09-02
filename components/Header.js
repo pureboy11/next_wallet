@@ -9,7 +9,7 @@ export default function Header() {
             <header className="text-gray-600 body-font">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <Link href="/">
-                        <a className="ml-3 text-xl">
+                        <a className="text-xl font-bold sm:text-3xl">
                             <h1>Wallet Viewer</h1>
                             {/* <img src="/wViewer.png" /> */}
                         </a>
