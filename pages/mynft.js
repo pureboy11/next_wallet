@@ -4,7 +4,7 @@ import nftdata from "../components/Data/nftdata";
 import NumberFormat from "react-number-format";
 import NftList from "../components/nftList";
 
-export default function mynft() {
+export default function Mynft() {
   const [radioValue, setRadioValue] = useState("1");
   const radios = [
     { name: "Newest NFT", value: "1" },
