@@ -45,14 +45,15 @@ export default function Home() {
                 className="btn-project rounded text-lg"
                 onClick={() => {
                   setShow(true);
+                  <WalletConnet />;
                 }}
               >
                 {" "}
-                Find It
+                Add
               </button>
             </div>
 
-            {show === true
+            {/* {show === true
               ? wallets.map((a, i) => {
                   return (
                     <WalletConnet
@@ -62,7 +63,7 @@ export default function Home() {
                     ></WalletConnet>
                   );
                 })
-              : null}
+              : null} */}
             <p
               onClick={() => {
                 setShow(!show);

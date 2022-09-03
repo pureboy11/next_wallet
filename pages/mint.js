@@ -1,6 +1,7 @@
 import TitleManager from "../components/TitleManager";
 import { TOKEN, DATABSE_ID } from "../config";
 import MintingList from "../components/MintingList";
+import Link from "next/link";
 
 export default function mint({ projects }) {
   // console.log(projects);
@@ -16,7 +17,11 @@ export default function mint({ projects }) {
 
         <div className="grid grid-cols-1 gap-8 lg:p-12 m-4 md:grid-cols-2 lg:grid-cols-3 ">
           {projects.results.map((mintList) => (
-            <MintingList key={mintList.id} data={mintList} />
+            <Link href={`/mint/${mintList.id}`} key={mintList.id}>
+              <a>
+                <MintingList data={mintList} />
+              </a>
+            </Link>
           ))}
         </div>
       </div>
@@ -52,9 +57,9 @@ export async function getStaticProps() {
 
   const projects = await res.json();
 
-  // const projectresults = projects.results.map((mintList) => (
-  //     mintList.properties.title.title[0].plain_text
-  // ))
+  const projectresults = projects.results.map(
+    (mintList) => mintList.properties.title.title[0].plain_text
+  );
 
   // console.log(`projectresults : ${projectresults}`);
 
