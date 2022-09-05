@@ -1,4 +1,7 @@
+import walletInfo from "./Data/walletInfo";
+
 export default function WalletConnet(props) {
+
   return (
     <>
       <div className="flex lg:flex-row md:flex-col mt-5">
@@ -16,7 +19,7 @@ export default function WalletConnet(props) {
           </svg>
           <span className="ml-4 flex items-start flex-col leading-none">
             <span className="text-xs text-gray-600 mb-1">Kaikas1</span>
-            <span className="text-xs text-gray-600 mb-1">asdsa</span>
+            <span className="text-xs text-gray-600 mb-1">{props.walletAddress}</span>
             <span className="title-font font-medium">Connected</span>
           </span>
         </button>

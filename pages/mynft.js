@@ -3,6 +3,7 @@ import { useState } from "react";
 import nftdata from "../components/Data/nftdata";
 import NumberFormat from "react-number-format";
 import NftList from "../components/nftList";
+import Link from "next/link";
 
 export default function Mynft() {
   const [radioValue, setRadioValue] = useState("1");
@@ -143,11 +144,17 @@ export default function Mynft() {
           </h1>
         </div>
         <div className="grid grid-cols-1 gap-8 lg:p-12 m-4 md:grid-cols-2 lg:grid-cols-3 ">
-          {nfts.map((a, i) => {
-            return <NftList nfts={nfts[i]} i={i} key={i}></NftList>;
-          })}
+          {nfts.map((nftList) => (
+            <Link href={`/mynft/${nftList.id}`} key={nftList.id}>
+              <a>
+                <NftList nfts={nftList} />
+              </a>
+            </Link>
+          ))}
         </div>
       </div>
+
+
 
       {/* <button
           onClick={() => {

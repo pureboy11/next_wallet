@@ -43,7 +43,7 @@ export default function MintingList({ data }) {
                                         bg-sky-200 dark:bg-sky-700 w-30" key={aTag.id}>{aTag.name}</h1>
                     ))}
                 </div>
-                <a href={url}>바로가기</a>
+                {/* <a href={url}>바로가기</a> */}
             </div>
 
 
