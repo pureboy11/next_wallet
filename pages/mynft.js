@@ -5,6 +5,7 @@ import NumberFormat from "react-number-format";
 import NftList from "../components/nftList";
 import Link from "next/link";
 
+
 export default function Mynft() {
   const [radioValue, setRadioValue] = useState("1");
   const radios = [
@@ -17,6 +18,7 @@ export default function Mynft() {
   var nftTotal = nfts.reduce(function (prev, cur) {
     return prev + cur.price;
   }, 0);
+
 
   return (
     <>

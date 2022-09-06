@@ -16,10 +16,13 @@ export default function Header() {
                     </Link>
                     <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                         <Link href="/mynft">
-                            <a className="mr-5 hover:text-gray-900">MY NFT</a>
+                            <a className="mr-5 hover:text-gray-900">My NFT</a>
                         </Link>
                         <Link href="/mint">
-                            <a className="mr-5 hover:text-gray-900">MINT</a>
+                            <a className="mr-5 hover:text-gray-900">Mint</a>
+                        </Link>
+                        <Link href="/setting">
+                            <a className="mr-5 hover:text-gray-900">Setting</a>
                         </Link>
 
                         {/* <a href="https://discord.gg/ctxA88yw" className="mr-5 hover:text-gray-900">Contact Us</a> */}
