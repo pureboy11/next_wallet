@@ -3,7 +3,7 @@ import { TOKEN, DATABSE_ID } from "../config";
 import MintingList from "../components/MintingList";
 import Link from "next/link";
 
-export default function mint({ projects }) {
+export default function mint({ projects, props }) {
   // console.log(projects);
 
   return (
