@@ -24,16 +24,16 @@ export default function Home() {
         <>
             <TitleManager pageTitle="home" />
             <section className="flex min-h-screen flex-col items-center text-gray-600 body-font">
-                <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h1 className="title-font text-3xl mb-4 font-xl font-bold text-gray-900">
+                <div className="container flex px-5 py-24 flex-col md:flex-row items-center">
+                    <div className="lg:flex-grow lg:pr-24 md:pr-4 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <h1 className="title-font text-2xl md:text-4xl sm:text-3xl mb-2 font-bold text-gray-900">
                             How much NFT assets do you have?
                         </h1>
-                        <p className="mb-8 leading-relaxed font-semibold">
+                        <p className="mb-8 leading-relaxed font-semibold ">
                             Check it right now by simply entering wallet address.
                         </p>
-                        <div className="flex w-full md:justify-start justify-center items-end">
-                            <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
+                        <div className="flex w-full md:justify-start justify-center items-end ">
+                            <div className="relative mr-2 xl:w-full  w-3/4  ">
                                 <Suspense fallback={<MoonLoader color="#36d7b7" size={20} />}>
                                     <input
                                         onChange={onChange}
@@ -69,20 +69,19 @@ export default function Home() {
                                 } */}
                             </button>
                         </div>
-                        <div className="flex items-baseline w-full ">
+                        <div className="flex flex-wrap items-baseline ">
                             {wallets.length >= 1 ?
                                 wallets.map((a, i) => {
                                     return (
-                                        <div className="flex lg:flex-row md:flex-col mt-5 "
+                                        <div className="flex justify-center  mt-5"
                                             wallets={wallets[i]}
                                             i={i}
                                             key={i}
                                         >
                                             <div
                                                 type="kaikas"
-                                                className="bg-gray-100 inline-flex py-5 px-2 rounded-lg items-center hover:bg-gray-200 focus:outline-none "
+                                                className="flex  py-5 rounded-lg items-center hover:bg-gray-300 focus:outline-none border border-slate-300 shadow-md"
                                             >
-
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     fill="currentColor"
@@ -92,8 +91,8 @@ export default function Home() {
                                                     <path d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"></path>
                                                 </svg>
                                                 <span className="ml-4 flex items-start flex-col leading-none">
-                                                    <span className="text-xs text-gray-600 mb-1 max-w-20 max-h-5">ETH 01</span>
-                                                    <span className="truncate w-40 text-sm ">{wallets[i]}</span>
+                                                    <span className="text-xs font-mono font-bold text-gray-600">Wallet {i + 1}</span>
+                                                    <span className="truncate text-sm w-20">{wallets[i]}</span>
                                                 </span>
                                             </div>
 
@@ -121,12 +120,12 @@ export default function Home() {
                             Wallet List{" "}
                         </p> */}
                         <Link href="mynft">
-                            <a className="bg-gradient-to-r from-indigo-600 to-pink-500 inline-flex text-white dark:text-white  border-0 py-2 px-6 focus:outline-none rounded text-lg mt-10">
+                            <a className="bg-gradient-to-r from-indigo-600 to-pink-500 inline-flex text-white dark:text-white  border-0 py-2 px-6 focus:outline-none rounded text-lg mt-10 ">
                                 Check Now
                             </a>
                         </Link>
                     </div>
-                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                    <div className="lg:max-w-lg lg:w-1/3 md:w-1/4 w-5/6">
                         <Animation />
                     </div>
                 </div>

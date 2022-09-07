@@ -17,7 +17,9 @@ export default function Darkmode() {
                             dark:text-slate-400
                             dark:hover:bg-slate-700
                             dark:hover:text-yellow-500
-                            text-base mt-4 md:mt-0"
+                            mt-4 md:mt-0
+                            "
+
                 type="button"
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
                 {/* light mode */}
@@ -32,11 +34,6 @@ export default function Darkmode() {
                     <path fillRule="evenodd" d="M7.455 2.004a.75.75 0 01.26.77 7 7 0 009.958 7.967.75.75 0 011.067.853A8.5 8.5 0 116.647 1.921a.75.75 0 01.808.083z" clipRule="evenodd" />
                 </svg>
             </button >
-
-
-
-
-
         </>
     )
 }
