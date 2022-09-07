@@ -24,8 +24,8 @@
 }
 
 .wallet--x-icon {
-  @apply cursor-pointer flex relative -translate-x-3 w-5 h-5 border bg-slate-300 rounded-full
-    hover:scale-125;
+  @apply cursor-pointer flex relative -translate-x-3 w-5 h-5 bg-red-500 rounded-full
+  text-white text-xs hover:scale-125;
 }
 
 h1,
